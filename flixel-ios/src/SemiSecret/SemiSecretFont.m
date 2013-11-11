@@ -32,7 +32,7 @@
   //  NSLog(@"klass: %@", klass);
   SemiSecretFont * font = nil;
   if (klass)
-    font = [[[klass alloc] initWithSize:size] autorelease];
+    font = [[[klass alloc] initWithSize:CGSizeMake(size, size)] autorelease];
   return font;
 }
 
@@ -40,7 +40,7 @@
 {
   Class klass = [self class];
   SemiSecretFont * f = nil;
-  f = [[[klass alloc] initWithSize:s] autorelease];
+  f = [[[klass alloc] initWithSize:CGSizeMake(s, s)] autorelease];
   return f;
 }
 
