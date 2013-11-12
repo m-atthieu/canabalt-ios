@@ -70,7 +70,7 @@ static NSMutableDictionary * managedSpriteInfoDictionary = nil;
 
   ManagedSpriteInfo * managedSpriteInfo = malloc(sizeof(ManagedSpriteInfo));
   info = [NSValue valueWithPointer:(const void *)managedSpriteInfo];
-  [managedSpriteInfoDictionary setObject:info forKey:[self class]];
+  [managedSpriteInfoDictionary setObject:info forKey:(id<NSCopying>)[self class]];
 
   if ([self class] == [FlxManagedSprite class]) {
     if (FlxG.iPad)
