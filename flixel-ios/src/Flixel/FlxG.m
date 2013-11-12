@@ -896,7 +896,7 @@ ALvoid alcMacOSXMixerOutputRateProc(const ALfloat value) {
 	[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], Music] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
 			       error:&error];
       if (audioPlayer) {
-	audioPlayer.delegate = self;
+	audioPlayer.delegate = (id<AVAudioPlayerDelegate>) self;
 	audioPlayer.numberOfLoops = -1;
 	if (!isOtherAudioPlaying)
 	  [audioPlayer play];
