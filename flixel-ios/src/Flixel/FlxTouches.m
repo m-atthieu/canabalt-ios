@@ -111,26 +111,38 @@
     z = z/2;
   UIDeviceOrientation o = game.currentOrientation;
   switch (o) {
-  case UIDeviceOrientationPortrait:
+    case UIDeviceOrientationPortrait:
     p.x = p.x/z;
     p.y = p.y/z;
     break;
-  case UIDeviceOrientationPortraitUpsideDown:
+    case UIDeviceOrientationPortraitUpsideDown:
     p.x = (t.view.bounds.size.width-p.x)/z;
     p.y = (t.view.bounds.size.height-p.y)/z;
     break;
-  case UIDeviceOrientationLandscapeLeft:
+    case UIDeviceOrientationLandscapeLeft:
     {
-      CGFloat x = p.x;
-      p.x = p.y/z;
-      p.y = (t.view.bounds.size.width-x)/z;
+    CGFloat x = p.x;
+    p.x = p.y/z;
+    p.y = (t.view.bounds.size.width-x)/z;
+    break;
+    }
+    case UIDeviceOrientationLandscapeRight:
+    {
+    CGFloat x = p.x;
+    p.x = (t.view.bounds.size.height-p.y)/z;
+    p.y = x/z;
+    break;
+    }
+    case UIDeviceOrientationUnknown:
+    {
       break;
     }
-  case UIDeviceOrientationLandscapeRight:
+    case UIDeviceOrientationFaceDown:
     {
-      CGFloat x = p.x;
-      p.x = (t.view.bounds.size.height-p.y)/z;
-      p.y = x/z;
+      break;
+    }
+    case UIDeviceOrientationFaceUp:
+    {
       break;
     }
   }

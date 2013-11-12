@@ -552,7 +552,16 @@ static CFTimeInterval gameStart;
 	  orientation = UIDeviceOrientationLandscapeRight;
 	else
 	  orientation = UIDeviceOrientationLandscapeLeft;
+          case UIDeviceOrientationLandscapeLeft:
+          {
+              break;
+          }
+          case UIDeviceOrientationLandscapeRight:
+          {
+              break;
+          }
       }
+    
       if (currentOrientation != orientation) {
 	currentOrientation = orientation;
         //set up status bar
