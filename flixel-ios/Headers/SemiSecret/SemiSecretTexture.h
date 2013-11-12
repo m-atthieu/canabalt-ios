@@ -58,7 +58,7 @@ typedef enum {
 @property (readonly) unsigned int frames;
 @property (readonly) GLshort * vertices;
 @property (readonly) GLshort * texCoords;
-@property (assign) BOOL animated;
+@property (assign,nonatomic) BOOL animated;
 
 @property (readonly) SemiSecretTexture * atlasTexture;
 @property (readonly) CGPoint atlasOffset;

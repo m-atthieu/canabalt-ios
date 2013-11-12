@@ -54,17 +54,17 @@ typedef enum {
   BOOL debug;
 }
 + (id) text;
-@property (copy) NSString * text;
-@property (assign) CGColorRef color;
-@property (assign) CGColorRef shadowColor;
+@property (copy,nonatomic) NSString * text;
+@property (assign,nonatomic) CGColorRef color;
+@property (assign,nonatomic) CGColorRef shadowColor;
 @property (retain) id font;
-@property (assign) SemiSecretTextEffect effect;
-@property (assign) SemiSecretTextAlign align;
+@property (assign,nonatomic) SemiSecretTextEffect effect;
+@property (assign,nonatomic) SemiSecretTextAlign align;
 @property (assign,getter=isWrapped) BOOL wrapped;
 - (CGFloat) heightForLines:(NSInteger)lines givenWidth:(CGFloat)width;
 @property (assign) CGFloat lineSpacing;
 @property (assign) BOOL reposition;
-@property (assign) CGFloat padding;
+@property (assign,nonatomic) CGFloat padding;
 @property (assign) BOOL wrapOnSpace;
 @property (assign) BOOL debug;
 @end

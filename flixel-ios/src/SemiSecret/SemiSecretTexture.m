@@ -107,7 +107,7 @@ static SSTextureDepth textureDepth = SSTextureDepth32Bits;
 }
 + (id) textureWithColor:(unsigned int)color
 {
-  return [[[self alloc] initWithColor:color] autorelease];
+  return [[(SemiSecretTexture *)[self alloc] initWithColor:color] autorelease];
 }
 + (id) textureWithCGColor:(CGColorRef)cgcolor
 {
@@ -561,7 +561,7 @@ static SSTextureDepth textureDepth = SSTextureDepth32Bits;
 
 - (NSString *) description
 {
-  return [NSString stringWithFormat:@"<SemiSecretTexture:%x, atlasTexture:%@, texture:%d>", self, atlasTexture ? @"YES" : @"NO", texture];
+  return [NSString stringWithFormat:@"<SemiSecretTexture:%@, atlasTexture:%@, texture:%d>", self, atlasTexture ? @"YES" : @"NO", texture];
 }
 
 @end

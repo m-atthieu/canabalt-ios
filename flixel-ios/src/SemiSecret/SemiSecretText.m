@@ -20,7 +20,9 @@
 @interface SemiSecretText ()
 - (void) computeNewBounds;
 - (NSInteger) nextWrapOffsetForGlyphs:(NSInteger)offset;
+
 @end
+
 
 @implementation SemiSecretText
 
@@ -268,6 +270,10 @@
 					shadowColor);
 	    break;
 	  }
+        case SemiSecretTextEffectNone:
+        {
+            break;
+        }
 	}
 	CGContextSetFillColorWithColor(context, color);
 	
@@ -306,6 +312,10 @@
 				    shadowColor);
 	break;
       }
+    case SemiSecretTextEffectNone:
+    {
+        break;
+    }
     }
 
     CGContextSetFillColorWithColor(context, color);
