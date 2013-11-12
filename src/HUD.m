@@ -58,7 +58,7 @@ static SemiSecretTexture * hudTexture = nil;
 {
   if (([super initWithX:0 y:0 graphic:nil])) {
     self.x = f.origin.x;
-    self.y = f.origin.y;
+    self.y = f.origin.y + 20;
     self.width = f.size.width;
     self.height = f.size.height;
   }

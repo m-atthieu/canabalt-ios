@@ -32,7 +32,7 @@ typedef struct {
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
-@interface UIDevice (Platform)
+@interface UIDevice (Platform) <AVAudioPlayerDelegate>
 - (NSString *) platform;
 @end
 

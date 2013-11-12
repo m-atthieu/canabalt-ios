@@ -50,7 +50,7 @@ static NSString * ImgExitOff = @"gameover_exit_off.png";
 #define GLASS_SHARDS
 #define SMOKE
 
-static CGRect pauseRect = { .origin = { .x = 0, .y = 0 },
+static CGRect pauseRect = { .origin = { .x = 0, .y = 20 },
 			    .size = { .width = 50, .height = 50 }
 };
 
@@ -220,7 +220,7 @@ static CGRect pauseRect = { .origin = { .x = 0, .y = 0 },
   
   [self add:[Jet jet]];
 
-  focus = [[[FlxObject alloc] initWithX:0 y:0 width:1 height:1] autorelease];
+    focus = (FlxSprite *) [[FlxObject alloc] initWithX:0 y:0 width:1 height:1];
   [FlxG followWithParam1:focus param2:15];
   [FlxG followBoundsWithParam1:0 param2:0 param3:INT_MAX param4:480];
   [FlxG followAdjustWithParam1:1.5 param2:0];
@@ -282,7 +282,7 @@ static CGRect pauseRect = { .origin = { .x = 0, .y = 0 },
   //need this to be above everything else
   pauseButton = [FlxSprite spriteWithGraphic:ImgPauseButton];
   pauseButton.x = 8;
-  pauseButton.y = 6;
+  pauseButton.y = 20;
   pauseButton.scrollFactor = CGPointMake(0, 0);
   if (pauseVisibility == NO)
     pauseButton.visible = NO;
@@ -530,7 +530,7 @@ static CGRect pauseRect = { .origin = { .x = 0, .y = 0 },
     exitOn = [FlxSprite spriteWithGraphic:ImgExitOn];
     exitOff = [FlxSprite spriteWithGraphic:ImgExitOff];
     exitOn.x = FlxG.width-62;
-    exitOn.y = 0;
+    exitOn.y = 20;
     exitOn.scrollFactor = CGPointMake(0, 0);
     exitOff.x = exitOn.x;
     exitOff.y = exitOn.y;

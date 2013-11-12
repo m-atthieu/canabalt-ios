@@ -252,7 +252,7 @@ enum {
     nowPlaying.color = 0xffffffff;
     nowPlaying.alignment = @"right";
     nowPlaying.x = FlxG.width-300-4;
-    nowPlaying.y = 4;
+    nowPlaying.y = 4 + 20;
     [self add:nowPlaying];
     danny = [FlxText textWithWidth:300
 		     text:@"Danny Baranowsky"
@@ -261,7 +261,7 @@ enum {
     danny.color = 0xffffffff;
     danny.alignment = @"right";
     danny.x = FlxG.width-300-4;
-    danny.y = 15+4;
+    danny.y = 15+4 + 20;
     [self add:danny];
 
     nowPlaying.visible = NO;
