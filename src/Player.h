@@ -33,7 +33,7 @@
 - (id) init;
 
 @property CGFloat jumpLimit;
-@property BOOL stumble;
+@property (nonatomic) BOOL stumble;
 @property BOOL craneFeet;
 @property (copy) NSString * epitaph;
 @property BOOL pause;
