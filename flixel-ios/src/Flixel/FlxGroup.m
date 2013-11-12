@@ -80,7 +80,7 @@
 }
 - (FlxObject *) replaceObjectAtIndex:(unsigned int)index withObject:(FlxObject *)NewObject;
 {
-  if ((index < 0) || (index >= members.length))
+  if (index >= members.length)
     return nil;
   [members replaceObjectAtIndex:index withObject:NewObject];
   return NewObject;
